@@ -1,5 +1,5 @@
 yandex:
-  api-key: api-key
+  api-key: ваш api-key
   url: https://translate.api.cloud.yandex.net/translate/v2/translate
   languages-url: https://translate.api.cloud.yandex.net/translate/v2/languages
 

@@ -56,7 +56,7 @@ public class AuditAspect {
 
         var auditLog = prepareAuditLog(request, req.getText())
                 .status(Status.SUCCESS.getStatus())
-                .translatedText(responseData.getTranslation())
+                .translatedText(responseData.getTranslatedText())
                 .build();
 
         compositeSender.send(auditLog, annotation.senders());

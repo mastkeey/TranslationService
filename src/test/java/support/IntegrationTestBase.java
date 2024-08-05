@@ -6,7 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.reactive.server.WebTestClient;
-import org.springframework.test.web.servlet.MockMvc;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import ru.mastkey.translater.repository.AuditLogRepository;
 
@@ -16,9 +15,6 @@ import ru.mastkey.translater.repository.AuditLogRepository;
 @ContextConfiguration(initializers = PostgreSQLInitializer.class)
 @Testcontainers
 public class IntegrationTestBase {
-    @Autowired
-    protected MockMvc mvc;
-
     @Autowired
     protected WebTestClient webClient;
 
