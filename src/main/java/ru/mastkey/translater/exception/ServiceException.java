@@ -3,9 +3,9 @@ package ru.mastkey.translater.exception;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class ServiceException extends RuntimeException{
+@EqualsAndHashCode(callSuper = true)
+public class ServiceException extends RuntimeException {
     private final Integer status;
     private final String code;
 
@@ -15,3 +15,4 @@ public class ServiceException extends RuntimeException{
         this.code = code;
     }
 }
+

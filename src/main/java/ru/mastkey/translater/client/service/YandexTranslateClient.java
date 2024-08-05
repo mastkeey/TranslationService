@@ -84,7 +84,6 @@ public class YandexTranslateClient implements TranslateClient {
             String message = messageResponse.replaceAll("<EOL>", "");
             JsonNode rootNode = objectMapper.readTree(message);
 
-
             return rootNode.path("message").asText();
         } catch (Exception e) {
             throw new ServiceException(e.getMessage(), 500, e.getMessage());

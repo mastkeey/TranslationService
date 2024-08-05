@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class TranslationResponse {
-    private String translation;
+    private String translatedText;
 }
