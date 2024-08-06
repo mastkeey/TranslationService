@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/translater
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: password
+  liquibase:
+    change-log: classpath:/migrations/db.changelog-master.yaml
+yandex:
+  api-key: ${APP_TRANSLATION_API_KEY}
+  url: https://translate.api.cloud.yandex.net/translate/v2/translate
+  languages-url: https://translate.api.cloud.yandex.net/translate/v2/languages
