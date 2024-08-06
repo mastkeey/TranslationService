@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - APP_TRANSLATION_API_KEY=${APP_TRANSLATION_API_KEY}
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: translater
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5433:5432"
