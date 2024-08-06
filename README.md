@@ -77,7 +77,7 @@ docker-compose up --build
 
 Если вы использовали Docker-compose для запуска, то нужно будет подключаться к PostgreSQL:
 
-- JDBC URL: `jdbc:postgresql://localhost:5433/tbankjuniorjava`
+- JDBC URL: `jdbc:postgresql://localhost:5433/translater`
 - User Name: `postgres`
 - Password: `password`
 
