@@ -5,8 +5,10 @@
 ### 1. Используемые технологии
 
 - Spring, Spring-Boot
-- H2 Database 
+- H2 Database
+- PostgreSQL
 - liquibase
+- Docker
 - Spring AOP - для аудита
 - Gradle
 - Yandex Translate API
@@ -42,23 +44,7 @@ yandex:
   api-key: ваш Api-Key 
 ```
 
-### 3. Запуск приложения
-
-Сборка проекта:
-```bash
-./gradlew clean build (Linux, macOS)
-gradle  clean build (Командная строка Gradle)
-gradlew  clean build (Windows)
-```
-
-Для запуска проекта используйте команду из корневой директории:
-```bash
-./gradlew :bootRun (Linux, macOS)
-gradle :bootRun (Командная строка Gradle)
-gradlew :bootRun (Windows)
-```
-
-### 4. Запуск приложения через Docker контейнер
+### 3. Запуск приложения через Docker контейнер (рекомендуется)
 
 #### 1. Настройте файл окружения
 
@@ -73,6 +59,27 @@ APP_TRANSLATION_API_KEY=Ваш Api-ключ
 docker-compose up --build
 ```
 Будет создано и запущено два контейнера: для бд и для приложения
+
+
+### 4. Запуск приложения через Gradle
+
+Сборка проекта:
+```bash
+./gradlew clean build (Linux, macOS)
+gradlew  clean build (Windows)
+```
+
+или через Execute gradle task выполнить `gradle clean build`
+
+Для запуска проекта используйте команду из корневой директории:
+```bash
+./gradlew :bootRun (Linux, macOS)
+gradlew :bootRun (Windows)
+```
+
+или через Execute gradle task выполнить `gradle :bootRun`
+
+
 ### 5. Доступ к базе данных
 
 Если вы использовали Docker-compose для запуска, то нужно будет подключаться к PostgreSQL:
